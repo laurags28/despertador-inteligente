@@ -1,0 +1,29 @@
+package app;
+
+import manager.AlarmManager;
+import model.Alarm;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        AlarmManager gestor = new AlarmManager();
+
+        Alarm alarma1 = new Alarm(1, "Ir a clase", 7, 30, 80);
+        Alarm alarma2 = new Alarm(2, "Entrenar", 7, 35, 60);
+        Alarm alarma3 = new Alarm(3, "Estudiar programación", 16, 0, 70);
+
+        gestor.crearAlarma(alarma1);
+        gestor.crearAlarma(alarma2);
+        gestor.crearAlarma(alarma3);
+
+        System.out.println("===== TODAS LAS ALARMAS =====");
+        gestor.mostrarAlarmas();
+
+        System.out.println("===== ALARMAS ACTIVAS =====");
+        gestor.mostrarAlarmasActivas();
+
+        System.out.println("===== DETECCIÓN DE CONFLICTOS =====");
+        gestor.detectarConflictos();
+    }
+}
