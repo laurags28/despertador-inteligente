@@ -1,4 +1,3 @@
-```java id="l5mgfd"
 package model;
 
 public class Alarm {
